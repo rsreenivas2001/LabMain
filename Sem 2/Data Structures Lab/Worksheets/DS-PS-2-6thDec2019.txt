@@ -1,0 +1,29 @@
+
+                                II Semester M.Sc(SS) - Data Structures - Problem Sheet 2 - 06.12.2019
+
+1. Integers between 1 and n are stored in an array exactly once except one number. Find 
+     the missing number with O(n) Time complexity.
+          (eg) Numbers 1 to 10 is stored in array as follows
+         A[] = { 1, 4 , 3 ,2,6,8,10,9,5}. Find the missing number(ie) 7 by traversing the array  
+       only once. Also you should not use another array.
+
+2. Suppose you have an array of 1001 integers. The integers are in random order, but you 
+    know each of the integers is between 1 and 1000 (inclusive). In addition, each number 
+    appears only once in the array, except for one number, which occurs twice. Assume 
+    that you can access each element of the array only once. Describe an algorithm to find 
+    the repeated number without using auxiliary array.
+3. A child is running up a staircase with n steps and can hop either 1 step or 2 steps at a time. 
+  Implement a recursive method to count how many possible ways the child can run up the stairs.
+
+4. Given an array of positive and negative numbers, arrange them in an alternate fashion such 
+that every positive number is followed by negative and vice-versa maintaining the order of appearance.
+Number of positive and negative numbers need not be equal. If there are more positive numbers they 
+appear at the end of the array. If there are more negative numbers, they too appear in the end of the array.
+You can use O(1) extra space (ie) only one additional variable. Also the original order should be maintained.
+Examples : 
+Input:  arr[] = {1, 2, 3, -4, -1, 4}
+Output: arr[] = {-4, 1, -1, 2, 3, 4}
+
+Input:  arr[] = {-5, -2, 5, 2, 4, 7, 1, 8, 0, -8}
+output: arr[] = {-5, 5, -2, 2, -8, 4, 7, 1, 8, 0}
+
