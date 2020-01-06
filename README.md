@@ -1,1 +1,1 @@
-lab works of sem 1 and sem 2
+Lab works of Sem 1 and Sem 2
