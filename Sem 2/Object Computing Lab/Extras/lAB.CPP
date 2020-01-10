@@ -6,6 +6,7 @@ class Point
     int x,y;
     Point( );
     Point(int ,int );
+    Point(&Point);
     bool isorigin();
     void display();
     Point diff(Point);
@@ -20,6 +21,11 @@ Point::Point(int x,int y)
 {
     this->x=x;
     this->y=y;
+}
+Point::Point(Point &P)
+{
+    x=P.x;
+    y=P.y;
 }
 bool Point::isorigin()
 {
@@ -55,12 +61,12 @@ Point Point::add(Point pp)
 }
 int main()
 {
-    Point p1(10,20),p2(30,10);
-   
+    Point p1(10,20),p2(30,10),p3(p2);
     cout<<p1.isorigin()<<"\n";
     p1.display();
-    (p1.diff(p2)).display();
-    (p2.diff(p1)).display();
+    p1.diff(p2).display();
+    p2.diff(p1).display();
 
 }
+
 

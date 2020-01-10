@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ps2_18</title>
+</head>
+<body>
+	<form autocomplete="on">
+		<h3>A Simple Form</h3><br>
+		<fieldset>
+			<legend>Customer Info</legend>
+				Name:<input type="text" name="name" autofocus placeholder="Enter your name"><br>
+				Telephone:<input type="tel" name="Telephone" placeholder="Pattern:12345 67890" pattern="[0-9]{10}"><br>
+				Email address:<input type="email" name="email add" placeholder="Enter your email address" multiple><br>
+		</fieldset>
+		<fieldset>
+			<legend>Books</legend>
+				<input list="books">
+				<datalist id="books">
+					<option value="twilight saga">
+					<option value="half girlfriend">
+					<option value="twilight breaking dawn">
+				</datalist>
+				Quantity(maximum5)<input type="number" name="qty" max="5" min="1">	
+		</fieldset>
+		<button>submit</button>
+	</form>
+</body>
+</html>

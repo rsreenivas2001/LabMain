@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ps2_19</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td align="top" style="width: 50%">
+				<form autocomplete="on">
+				First Name:
+				<input type="text" name="name"><br>
+				Last Name:
+				<input type="text" name="name"><br>
+				Company Institution:
+				<input type="text" name="company"><br>
+				Address:
+				<textarea cols="30" rows="20"></textarea><br>
+				City:
+				<input type="text" name="city"><br>
+				State:
+				<input list="state">
+					<datalist id="state">
+						<option value="tamil nadu">
+						<option value="kerala">	
+					</datalist><br>
+				Country:
+				<input list="country">		
+					<datalist id="country">
+						<option value="india">
+						<option value="iran">
+						<option value="pakistan">
+					</datalist><br>
+				Email:
+				<input type="email" name="email"><br>
+				Phone number:
+				<input type="tel" name="phone" pattern="[0-9]{10}"><br/>
+				</form>
+			</td>
+			<td align="top" style="width: 50%">
+				<form>
+					Lunch:
+				<input list="food">
+				<datalist id="food">
+					<option value="vegetarian">
+					<option value="nonvegetarian">
+				</datalist><br>
+				Payment Details:
+				<input type="checkbox" name="Payment" value="cash">Cash<br>
+				<input type="checkbox" name="Payment" value="cheque">Cheque<br>
+				<input type="checkbox" name="Payment" value="dd">DD
+				<br>
+				DD Cheque No.:
+				<input type="number" name="dd"><br>
+				Drawn on:
+				<input type="text" name="bankname"><br>
+				Payable at:
+				<input type="text" name="payable"><br>
+				<input type="submit" name="sub">
+				<input type="reset" name="reset">
+				</form>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
