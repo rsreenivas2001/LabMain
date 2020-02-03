@@ -75,3 +75,46 @@ void stack::count()
 {
     cout<<"The number of elements in the stack are "<<top+1;
 }
+int main()
+{
+        stack ss;
+        int sizee,ch,eleme;
+        cout<<"Enter the size of stack";
+        cin>>sizee;
+        char yn;
+        do
+        {
+        cout<<"Choose an option : ";
+        cout<<" 1. Push ";
+        cout<<"\n 2. Pop ";
+        cout<<"\n 3. Display from Bottom";
+        cout<<"\n 4. Display from Top ";
+        cout<<"\n 5. Display number of Elememts \n Your choice : ";
+        cin>>ch;
+        switch(ch)
+        {
+        case 1:
+                cout<<"Enter element to push : ";
+                cin>>eleme;
+                ss.push(eleme,sizee);
+                break;
+        case 2:
+                ss.pop();
+                break;
+        case 3:
+                ss.disp_bottom(sizee);
+                break;
+        case 4:
+                ss.disp_top(sizee);
+                break;
+        case 5:
+                ss.count();
+                break;
+        default:
+                cout<<"Choice Invalid!!\n\n ";
+        }
+        cout<<"\n\nDo you wish to continue (y/n) : ";
+        cin>>yn;
+        }while(yn=='y');
+}
+

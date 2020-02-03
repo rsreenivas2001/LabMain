@@ -64,7 +64,7 @@ int main()
     Point p1(10,20),p2(30,10),p3(p2);
     cout<<p1.isorigin()<<"\n";
     p1.display();
-    p1.diff(p2).display();
+    (p1.diff(p2)).display();
     p2.diff(p1).display();
 
 }
