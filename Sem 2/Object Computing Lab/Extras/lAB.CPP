@@ -1,11 +1,15 @@
 #include<iostream>
+#include<string.h>
+
 using namespace std;
 class Point
 {
+       int x,y;
+       char *name;
     public:
-    int x,y;
+
     Point( );
-    Point(int ,int );
+    Point(int ,int ,char *);
     Point(Point&);
     bool isorigin();
     void display();
@@ -15,11 +19,35 @@ class Point
     Point operator-();
     Point operator+(Point&);
     Point operator-(Point&);
-    
-    
+    friend ostream& operator<<(ostream &out,const Point &p);
+    friend istream& operator>>(istream &in,Point &p);
+
+
 };
+
+ostream& operator<<(ostream &out,const Point &p)
+{
+    out<<"\nx="<<p.x;
+    out<<"\ny="<<p.y;
+    out<<"\nName="<<p.name;
+    return out;
+}
+istream& operator>>(istream &in,Point &p)
+{
+    in.ignore();
+
+    cout<<"\nEnter x : ";
+    in>>p.x;
+    cout<<"\nEnter y : ";
+    in>>p.y;
+    cout<<"\nEnter name : ";
+    in>>p.name;
+    return in;
+}
 Point Point::operator-()
 {
+
+
     Point t;
     t.x=-x;
     t.y=-y;
@@ -43,16 +71,19 @@ Point Point::operator-(Point&p)
 Point::Point( )
 {
     x=0;y=0;
+    name=NULL;
 }
-Point::Point(int x,int y)
+Point::Point(int x,int y,char name[])
 {
     this->x=x;
     this->y=y;
+    this->name=name;
 }
 Point::Point(Point &P)
 {
     x=P.x;
     y=P.y;
+    strcpy(name,P.name);
 }
 bool Point::isorigin()
 {
@@ -87,14 +118,13 @@ Point Point::add(Point pp)
 }
 int main()
 {
-    Point p1(10,20),p2,p3(5,15),p4;
-    p2=-p1;
-    p2.display();
-    p4=p1-p3;
-    p4.display();
-    p4=p3+p1;
-    p4.display();
-    
+    Point p1,p2,p3,p4;
+    cin>>p1;
+    cin>>p2;
+    p3=p1+p2;
+    cout<<p3;
+
+
 }
 
 
