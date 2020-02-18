@@ -21,7 +21,7 @@ int main()
      {
 
     cout<<"\n\nEnter the option to perform the following operations : \n\n";
-    cout<<"1 .Union\n2.Intersection\n3.Insert\n4.Remove\n5.Remove Duplicate\n";
+    cout<<"1 .Union\n2.Intersection\n3.Insert\n4.Remove\n5.Remove Duplicate\n6.Display\n";
     cout<<"Enter choice : ";
     cin>>ch;
 
@@ -29,12 +29,12 @@ int main()
         switch(ch)  //A menu for given options
     {
         case 1:s3=s1.union1(s2);
-               s3.display_set();
+               //s3.display_set();
                break;
         case 2:s3=s1.intersection(s2);
-               s3.display_set();
+               //s3.display_set();
                break;
-        case 3:cout<<"Enter 1 for set 1 and 2 for set 2";
+        case 3:cout<<"Enter 1 for set 1 and 2 for set 2 : ";
                cin>>num;
                if(num==1)
                {
@@ -51,7 +51,7 @@ int main()
                    s2.insert(r3);
                }
                break;
-        case 4:cout<<"Enter 1 for set 1 and 2 for set 2";
+        case 4:cout<<"Enter 1 for set 1 and 2 for set 2 : ";
                cin>>num;
                if(num==1)
                {
@@ -72,17 +72,23 @@ int main()
         case 5:s1.duplicate_removal(s2);
                s1.display_set();
                break;
+        case 6:cout<<"Enter 1 for set 1 and 2 for set 2 : ";
+               cin>>num;
+               if(num==1)
+               {
+               s1.duplicate_removal(); 
+               s1.display_set();
+               }
+               else if(num==2)
+               {
+                s2.display_set();
+                s2.display_set();
+               }
+               break;
 
     }
     cout<<"Enter y to perform another task :";
     cin>>xy;
     }
-
-
-
-
-
-
-
-       return 0;
+    return 0;
 }

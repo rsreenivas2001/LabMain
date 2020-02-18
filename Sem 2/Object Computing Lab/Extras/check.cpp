@@ -6,17 +6,13 @@ class Point
     int x,y;
     Point( );
     Point(int ,int );
-    Point(Point&);
+    Point(&Point);
     bool isorigin();
     void display();
     Point diff(Point);
     void negative();
     Point add(Point);
-    Point operator-();
-    Point operator+(Point&);
-    Point operator-(Point&);
-    
-    
+    void operator-();
 };
 Point Point::operator-()
 {
@@ -25,21 +21,14 @@ Point Point::operator-()
     t.y=-y;
     return t;
 }
+Point Point::operator=()
+{
+    Point t;
+    t.x=x;
+    t.y=y;
+    return t;
+}
 
-Point Point::operator+(Point&p)
-{
-    Point t;
-    t.x=x+p.x;
-    t.y=y+p.y;
-    return t;
-}
-Point Point::operator-(Point&p)
-{
-    Point t;
-    t.x=x-p.x;
-    t.y=y-p.y;
-    return t;
-}
 Point::Point( )
 {
     x=0;y=0;
@@ -73,10 +62,11 @@ void Point::negative()
 }
 Point Point::diff(Point pp)
 {
-    Point pa;
-    pa.x=x-pp.x;
-    pa.y=y-pp.y;
-    return pa;
+    Point px;
+    px.x=x;
+    px.y=y;
+    pp.negative();
+    return (px.add(pp));
 }
 Point Point::add(Point pp)
 {
@@ -87,14 +77,10 @@ Point Point::add(Point pp)
 }
 int main()
 {
-    Point p1(10,20),p2,p3(5,15),p4;
+    Point p1(10,20),p2;
     p2=-p1;
     p2.display();
-    p4=p1-p3;
-    p4.display();
-    p4=p3+p1;
-    p4.display();
-    
+
 }
 
 

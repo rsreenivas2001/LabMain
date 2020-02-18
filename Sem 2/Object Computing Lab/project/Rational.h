@@ -17,3 +17,14 @@ class Rational
         bool check(Rational z);
         void disp();
 };
+bool Rational::check(Rational z)
+{
+    if(m==z.m&&n==z.n)
+    return true;
+    else
+    return false;
+}
+void Rational::disp()
+{
+    cout<<m<<"/"<<n<<"\t";
+}
