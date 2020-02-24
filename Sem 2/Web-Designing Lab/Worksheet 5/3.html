@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter Principal : <input id="p"></p>
+    <p>Enter Rate      : <input id="r"></p>
+    <p>Enter Years     : <input id="n"></p>
+    <button onclick="sim()">Simple Interest</button>
+    <p id="si"></p>
+    <script>
+        function sim()
+        {
+        var p,n,r;
+        p=document.getElementById("p").value;
+        n=document.getElementById("n").value;
+        r=document.getElementById("r").value;
+        var si=(p*n*r)/100;
+        document.getElementById("si").innerHTML="The simple interest is  "+si;
+        }
+    </script>
+</body>
+</html>
+
+

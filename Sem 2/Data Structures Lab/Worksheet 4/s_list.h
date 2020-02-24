@@ -11,9 +11,9 @@ class node
 
 class list
 {
-    node *head; 
+    node *head;
    public:
-   
+
     list()
     {
     head=NULL;
@@ -37,7 +37,8 @@ class list
     void deletemid(int);
     void deleteend();
     void display();
-    
+    void swap_min_max();
+
 };
 void list::insertbeg()
 {
@@ -52,10 +53,10 @@ void list::insertbeg()
 }
 void list::insertbeg(int val)
 {
-    
+
     node *newnode;
     newnode= new node;
-    
+
     newnode->data=val;
     newnode->next=head;
     head=newnode;
@@ -182,10 +183,10 @@ void list::insertend()
 void list::insertend(int val)
 {
 
-    
+
     node *newnode;
     newnode= new node;
-   
+
     if(head==NULL)
         {
             newnode->data=val;
@@ -256,7 +257,7 @@ void list::deletemid()
 void list::deletemid(int val1)
 {
     int flag=0;
-    
+
     if(head==NULL)
         {
             cout<<"EMPTY!!";
@@ -286,6 +287,47 @@ void list::deletemid(int val1)
     }
 }
 
+void list::swap_min_max()
+{
+    node *max,*min,*t;
+    max=head;
+    min=head;
+    node *pmin=NULL,*pmax=NULL,*pt=head;
+    t=head;
+    cout<<"working";
+
+    while(t=NULL)
+    {
+        if((min->data)>(t->data))
+            {
+                pmin=pt;
+                min=t;
+
+            }
+        if((max->data)<(t->data))
+            {
+                pmax=pt;
+                max=t;
+
+            }
+            pt=t;
+        t=t->next;
+    }
+    cout<<"\nworking";
+    node *t1,*t2,*t3;
+    cout<<"\nworking\n";
+    cout<<(min->next)->data;
+    cout<<(max->next)->data;
+
+    t2=max->next;
+
+    cout<<"\nworking";
+    min=max;
+    max->next=min->next;
+    pmax->next=min;
+    min->next=t2;
+
+}
 
 void list::deleteend()
 {
