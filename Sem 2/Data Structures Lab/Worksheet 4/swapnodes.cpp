@@ -11,8 +11,9 @@ int main()
     for(i=0;i<k;i++)
         l1.insertbeg();
     l1.display();
-    l1.swap_min_max();
     cout<<"After swapping the Nodes: \n";
-    l1.display();
+    l1.swap_min_max();
+    
+    
     return 0;
 }

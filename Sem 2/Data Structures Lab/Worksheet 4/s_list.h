@@ -296,7 +296,7 @@ void list::swap_min_max()
     t=head;
     cout<<"working";
 
-    while(t=NULL)
+    while(t!=NULL)
     {
         if((min->data)>(t->data))
             {
@@ -314,18 +314,20 @@ void list::swap_min_max()
         t=t->next;
     }
     cout<<"\nworking";
-    node *t1,*t2,*t3;
+    node *t2;
     cout<<"\nworking\n";
-    cout<<(min->next)->data;
-    cout<<(max->next)->data;
+    cout<<min->data;
+    cout<<max->data;
 
     t2=max->next;
-
+    
     cout<<"\nworking";
-    min=max;
+    pmin->next=max;
     max->next=min->next;
     pmax->next=min;
     min->next=t2;
+    display();
+    
 
 }
 

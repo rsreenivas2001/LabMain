@@ -19,6 +19,8 @@ list concatenate(list &t,list &u)
         temp.insertend(t2->data);
         t2=t2->next;
     }
+    free(t1);
+    free(t2);
     return temp;
 }
 int main()

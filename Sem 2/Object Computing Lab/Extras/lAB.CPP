@@ -2,10 +2,29 @@
 #include<string.h>
 
 using namespace std;
+
+class rational;
+class Point;
+
+
+class rational
+{
+    int z;
+    public:
+    rational()
+    {
+        z=0;
+    }
+    void operator=(Point &p1);
+    void display()
+    {
+        cout<<"\nz="<<z;
+    }
+};
 class Point
 {
        int x,y;
-       char *name;
+
     public:
 
     Point( );
@@ -21,15 +40,24 @@ class Point
     Point operator-(Point&);
     friend ostream& operator<<(ostream &out,const Point &p);
     friend istream& operator>>(istream &in,Point &p);
+    friend void rational::operator=(Point &p1);
 
 
 };
+
+
+
+void rational::operator=(Point &p1)
+{
+    z=(p1.x/p1.y);
+}
+
 
 ostream& operator<<(ostream &out,const Point &p)
 {
     out<<"\nx="<<p.x;
     out<<"\ny="<<p.y;
-    out<<"\nName="<<p.name;
+
     return out;
 }
 istream& operator>>(istream &in,Point &p)
@@ -40,8 +68,7 @@ istream& operator>>(istream &in,Point &p)
     in>>p.x;
     cout<<"\nEnter y : ";
     in>>p.y;
-    cout<<"\nEnter name : ";
-    in>>p.name;
+
     return in;
 }
 Point Point::operator-()
@@ -71,20 +98,19 @@ Point Point::operator-(Point&p)
 Point::Point( )
 {
     x=0;y=0;
-    name=NULL;
+
 }
 Point::Point(int x,int y,char name[])
 {
     this->x=x;
     this->y=y;
-    this->name=name;
+
 }
 Point::Point(Point &P)
 {
     x=P.x;
     y=P.y;
-    strcpy(name,P.name);
-}
+    }
 bool Point::isorigin()
 {
     if(x==0&&y==0)
@@ -118,11 +144,15 @@ Point Point::add(Point pp)
 }
 int main()
 {
-    Point p1,p2,p3,p4;
+    Point p1,p2;
     cin>>p1;
     cin>>p2;
-    p3=p1+p2;
-    cout<<p3;
+    rational r1,r2;
+    r1=p1;
+    r2=p2;
+    r1.display();
+    r2.display();
+
 
 
 }
