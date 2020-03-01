@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calArea()
+        {
+            var a = Number(document.getElementById('side1').value);
+            var b = Number(document.getElementById('side2').value);
+            var c = Number(document.getElementById('side3').value);
+            console.log(a,b,c,typeof(a),typeof(b),typeof(c));
+            var s = (a+b+c)/2;
+            var area = (s*(s-a)*(s-b)*(s-c))**0.5;
+            document.getElementById('result').innerHTML = "The area of the triangle is: "+area;
+        }
+    </script>
+</head>
+<body>
+    <p>Enter the first side of the triangle</p><input id = "side1" type="text">
+    <p>Enter the second side of the triangle</p><input id = "side2" type="text">
+    <p>Enter the third side of the triangle</p><input id = "side3" type="text"> <br> <br>
+    <button onclick="calArea()">Submit</button>
+    <p id = "result"></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate()
+        {
+            var num = [Number(document.getElementById('num1').value),
+                        Number(document.getElementById('num2').value),
+                        Number(document.getElementById('num3').value)];
+
+            var sum = num[0] + num[1] + num[2];
+            var average = sum/3;
+            var product = num[0] * num[1] * num[2];
+            var small = num[0],large = num[0];
+            for(i=1; i<3; i++)
+            {
+                if(num[i]<small)
+                    small = num[i];
+                else
+                    large = num[i];
+            }
+            alert(  "The sum is: "+ sum + 
+                    "\nThe average is " + average + 
+                    "\nThe product is " + product + 
+                    "\nThe smallest number is " + small + 
+                    "\nThe largest number is " + large  );
+        }
+    </script>
+</head>
+<body>
+    <p>Enter the first number</p> <input type="text" id="num1">
+    <p>Enter the second number</p> <input type="text" id="num2">
+    <p>Enter the third number</p> <input type="text" id="num3"> <br> <br>
+    <button onclick="calculate()">Submit</button>
+</body>
+</html>

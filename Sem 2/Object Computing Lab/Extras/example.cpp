@@ -17,6 +17,6 @@ int main()
     cout<<*a;
     a=a+1;
     cout<<endl<<*a;
-    a=a+1;
+    a=a+2;
     cout<<endl<<*a;
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate()
+        {
+            var result;
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            if(num1%num2 == 0)
+                result = num1 + " is a multiple of " + num2;
+            else
+                result = num1 + " is not a multiple of " + num2;
+            document.getElementById('final').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <p>Enter the first number</p> <input type="text" id="num1">
+    <p>Enter the second number</p> <input type="text" id="num2"> <br> <br>
+    <button onclick="calculate()">Evaluate</button>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function execute()
+        {
+            var countPos = 0, countNeg = 0, countZero = 0;
+            var arr = [ Number(document.getElementById('num1').value),
+                        Number(document.getElementById('num2').value),
+                        Number(document.getElementById('num3').value),
+                        Number(document.getElementById('num4').value),
+                        Number(document.getElementById('num5').value)];
+
+            for(i = 0; i < 5; i++)
+            {
+                console.log(arr[i]);
+                if(arr[i] < 0)
+                    countNeg++;
+                else if(arr[i] > 0)
+                    countPos++;
+                else
+                    countZero++;
+            }
+            document.getElementById('result').innerHTML =   "The number of positive numbers is " + countPos + "<br>" +
+                                                            "The number of negative numbers is " + countNeg + "<br>" +
+                                                            "The number of zeros is " + countZero ;
+        }   
+    </script>
+</head>
+<body>
+    <p>Enter the first number</p> <input id = "num1" type="text">
+    <p>Enter the second number</p> <input id = "num2" type="text">
+    <p>Enter the third number</p> <input id = "num3" type="text">
+    <p>Enter the fourth number</p> <input id = "num4" type="text">
+    <p>Enter the fifth number</p> <input id = "num5" type="text"> <br> <br>
+    <button onclick = "execute()">Submit</button>
+    <p id = "result"></p>
+</body>
+</html>
