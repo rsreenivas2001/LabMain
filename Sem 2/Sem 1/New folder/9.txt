@@ -1,0 +1,28 @@
+Question 9:
+A pointer is a variable that holds a memory address. This address is the location of another variable in memory.
+Pointer declaration syntax <data type> *a.
+Since pointer hold the address they are used in call by reference. 
+Pointers, arrays and strings are closely related. For example in the program
+Char str [100],*p1;
+p1=str;
+Here p1 has been set to the address of the first array element in str.
+*(p1+4) or str [4] can be used to return the 5th element.
+This is also applicable for integer arrays also.
+Dynamic Memory Allocation can be defined as a procedure in which the size of a data structure is changed during the runtime.
+ptr = (cast-type*) malloc(byte-size);
+(i)An array is a collection of variables of the same type that are referred through a common name. 
+   A pointer is a variable that holds memory address .
+   This address is the location of another object in memory.
+   There is a basic difference between a pointer and an array that is, an array is a collection
+   of variables of similar data type whereas the pointer is a variable that stores the address of another variable.
+(ii)Structure is a collection of variables referenced under one name. Arrays can have values of a 
+    specific data type, but structures can have variables with any data type. 
+    Array allocates static memory and uses index value for accessing its elements whereas a structure
+    allocates dynamic memory and uses (.) operator to access its members.
+(iii)Unions and structures are almost similar but they differ in terms of memory allocation. 
+Each member of a structure has a separate memory whereas memory is shared between members of a union.
+(iv) A macro is a name given to a block of C statements as a pre-processor directive.
+     A function is a set of statements that together perform a task. Every c program contains at least one function.
+    The main difference between a function and a macro is that a function is compiled whereas a macro is preprocessed. 
+(v) A string is a sequence of characters treated as a single entity and is terminated by a null character (‘\0’).Whereas character array is a collection of characters without a null character in the end.
+
