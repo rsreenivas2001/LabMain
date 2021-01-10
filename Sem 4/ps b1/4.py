@@ -3,6 +3,8 @@ s = input()
 
 i, c = input().split()
 
-output = s.replace(s[int(i)], c)
+lt = list(s)
+lt[int(i)] = c
+output = ''.join(lt)
 
 print(output)
