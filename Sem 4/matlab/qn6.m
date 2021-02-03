@@ -1,0 +1,1 @@
+vecA = linspace(49, 10, 14)vecB = [vecA(1:4), vecA(11:14)]

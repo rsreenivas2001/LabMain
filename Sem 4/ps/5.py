@@ -4,7 +4,7 @@ alonzo_ratings = {"alice": 3, "bob": 2, "turing": 1}
 turing_ratings = {"alice": 2, "alonzo": 1, "bob": 3}
 friends = {"alice": alice_ratings, "bob": bob_ratings,"alonzo": alonzo_ratings, "turing": turing_ratings}
 
-def popular_student():
+def least_popular_student():
 
     results = dict.fromkeys(friends.keys(),0)
 
@@ -17,5 +17,6 @@ def popular_student():
 
     return popular
 
+
 if __name__ == '__main__':
-    print(str(popular_student()))
+    print(str(least_popular_student()))

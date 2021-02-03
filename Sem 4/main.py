@@ -1,11 +1,20 @@
-  
-def getMax(intList):
-    if len(intList) == 1:
-        return intList[0]
-    else:
-        max = getMax(intList[1:])
-        return max if max > intList[0] else intList[0]
+import math
 
-if __name__ == '__main__':
-    list = [1,2,3,4,5,6,7,8,10,6,4]
-    print(getMax(list))
+def magnitude(vec):
+    total = 0
+    for x in vec:
+        print(x)
+        total += (pow(x, 2))
+    print(math.sqrt(total))
+
+
+u = list(map(int, input('Enter 1st vector : ').split()))
+v = list(map(int, input('Enter 2nd vector : ').split()))
+
+total = 0
+
+magnitude(u)
+magnitude(v)
+
+
+

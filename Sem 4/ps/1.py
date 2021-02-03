@@ -5,7 +5,7 @@ def most_frequent(str):
             cnt[ltr] = 1
         else:
             cnt[ltr] += 1
-    return sorted(cnt.items(),key=lambda cnt : cnt[1],reverse=True)
+    return sorted(cnt.items(),key=lambda count: count[1],reverse=True)
 
 if __name__ == '__main__':
     x = input("Enter String : ")

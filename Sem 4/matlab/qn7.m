@@ -1,0 +1,1 @@
+a = [linspace(0,30,7); linspace(600,0,7); linspace(0,5,7)]
