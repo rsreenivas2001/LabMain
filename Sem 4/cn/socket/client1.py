@@ -1,6 +1,6 @@
 import socket
 
-msgFromClient = "coming from server 1"
+msgFromClient = "Hello From UDP client 1"
 bytesToSend= str.encode(msgFromClient)
 serverAddressPort = ("127.0.0.1", 5000)
 bufferSize = 1024
