@@ -1,0 +1,1 @@
+while true  x = randi([3,10]);  if(x != 5)    disp(num2str(x));  else    disp(num2str(x));    break  endifendwhile

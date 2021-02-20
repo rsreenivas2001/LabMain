@@ -1,0 +1,1 @@
+len = input("enter the number : ");for i = 1 : 100  if(fibonacci(i) > len)    break;    endif  printf("%d, ", fibonacci(i));endforprintf("\n")

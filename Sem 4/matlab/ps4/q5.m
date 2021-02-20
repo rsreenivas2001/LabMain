@@ -1,0 +1,1 @@
+x = input("entert the number : ");if (rem(x,2) == 0)  printf("even")   printf("\n") else  printf("odd")  printf("\n")endif

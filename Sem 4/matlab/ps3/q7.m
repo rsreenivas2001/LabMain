@@ -1,0 +1,1 @@
+x = linspace(-2,4);y = 3.*((x).^3)-26.*x+10;f1x = diff(y);f2x = diff(f1x);vec_1 = x(1:end-1);vec_2 = x(1:end-2);plot(x,y,vec_1,f1x,vec_2,f2x)

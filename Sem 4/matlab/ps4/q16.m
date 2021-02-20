@@ -1,0 +1,1 @@
+sum = 0;for i = 1:501,  if(rem(i,2) != 0)    sum = sum + i;  endif  endfordisp(["the total is = ",num2str(sum)])
