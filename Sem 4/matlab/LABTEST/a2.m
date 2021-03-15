@@ -6,11 +6,11 @@
 %1
 %b
 fun = @(x) (((2.*x) + 3 + exp(x))./((4.*x) - 5));
-fplot(fun,[2,6], ':og');
+fplot(fun,[2,6], 'g:o');
 hold on 
-fplot(fun,[2 6], 'MarkerFaceColor','red');
-hold on
 fplot(fun,[2 6],'MarkerEdgeColor','yellow');
+hold on
+fplot(fun,[2 6], 'MarkerFaceColor','red');
 hold on
 fplot(fun,[2 6], 'MarkerSize',14);
 hold on

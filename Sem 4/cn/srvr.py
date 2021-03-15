@@ -5,7 +5,7 @@ PORT = 65432        # Port to listen on (non-privileged ports are > 1023)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((HOST, PORT))
-    #s.listen()
+    s.listen()
     print("listening")
     conn, addr = s.accept()
     with conn:

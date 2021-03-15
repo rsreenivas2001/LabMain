@@ -1,4 +1,4 @@
-sequence = [5, 10, 15, 20, 25, 30, 35]
+sequence = [5, 10, 15, 20, 25, 30, 359]
 a = sequence
 
 mid = int((len(a)+1)/2 - 1)
